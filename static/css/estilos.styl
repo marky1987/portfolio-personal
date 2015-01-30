@@ -1,0 +1,198 @@
+@import "nib"
+@import "slider.styl"
+@import "fonts.styl"
+
+
+.u-title
+  border-bottom 2px dashed #00CCFF
+  color #00CCFF
+  font-weight normal
+  padding-bottom 0.5em
+  text-align center
+
+.u-containerDefault
+  margin 0 auto
+  max-width 800px
+
+.MainMenu
+  background #1E1E1E
+  height 3.75em
+  left 0
+  position fixed
+  right 0
+  text-align center
+  top 0
+  z-index 3
+
+.MainMenu-list
+  margin 0
+  padding 0
+
+.MainMenu-item
+  display inline-block
+
+.MainMenu-link
+  color #00DBFF
+  line-height 3.75em
+  margin-right 1.5em
+  text-decoration none
+
+.Header
+  background-image url('../imagenes/portada2.jpg')
+  background-position center
+  background-repeat no-repeat
+  background-size cover
+  margin-top 3.75em
+  padding 1.2em 0
+  text-align center
+  &-button
+    background white
+    border none
+    border-radius 50%
+    display none
+    height 40px
+    line-height 40px
+    outline 0
+    position fixed
+    right 1em
+    top 1em
+    width 40px
+    z-index 3
+    &.is-active
+      display block
+.Header-imageContainer
+  margin 0
+
+.Header-image
+  border 5px solid white
+  border-radius 50%
+
+.Header-name,
+.Header-link
+  color white
+
+.Header-link
+  font-size 2.2em
+  font-weight bold
+  text-decoration none
+
+.Header-name
+  font-size 1.5em
+  font-weight 300
+  margin 0
+
+.Profile
+  padding 0 1em
+  text-align center
+
+.Profile-link
+  background orange
+  border-radius 2em
+  color white
+  display inline-block
+  margin-bottom 1em
+  margin-right 0.5em
+  padding 0.5em 1em
+  text-decoration none
+  &.twitter
+      background #55ACEE
+  &.facebook
+      background #4862A3
+  &:before
+    margin-right 0.5em
+
+.Work
+  margin-top 2em
+  text-align center
+  &-container
+    display flex
+    flex-wrap wrap
+    justify-content space-around
+
+.Work-item
+  display inline-block
+  margin-bottom 1.8em
+
+.Work-imageContainer
+  margin 0
+
+.Work-description
+  color #515151
+  font-size 1.1em
+  font-style italic
+
+.Footer
+  background-position center
+  background-repeat no-repeat
+  background-size cover
+  image('../imagenes/footer.jpg', w=1024px, h=343px)
+  padding 2em 0
+  text-align center
+
+.Footer-form
+  display inline-block
+  text-align center
+
+.Footer-left
+  display inline-block
+  text-align center
+  vertical-align top
+  max-width 32em
+
+.Footer-title
+  color white
+
+.Footer-formInput,
+.Footer-textarea
+  background white
+  border none
+  border-radius 2em
+  display block
+  margin 0 auto 1em
+  outline 0
+  padding 0.5em
+
+.Footer-textarea
+  resize none
+
+.Footer-button
+  background orange
+  border none
+  border-radius 1em
+  color white
+  padding 0.5em 1em
+.Slider
+  background black
+  &-container
+    margin 0 auto
+    max-width 1024px
+    
+
+
+@media screen and (max-width: 480px)
+  .Profile
+    &-link
+        display block
+        
+@media screen and (max-width: 767px)
+  .Footer
+    &-form
+      display block
+    &-formInput
+    &-textarea
+      width 90%
+      box-sizing border-box
+    
+  .Header
+    margin-top 0
+
+  .MainMenu
+    height auto
+    left -200px
+    transition .3s
+    width 200px
+    &.is-active
+      left 0
+    &-item
+      display block
+      

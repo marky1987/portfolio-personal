@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Portfolio.la</title>
+	<meta name="viewport" content="width=device-width,maximum-scale=1"/>
+	<link rel="stylesheet" href="../static/css/normalize.css">
+	<link rel="stylesheet" href="../static/css/estilos.css">
+</head>
+<body>
+	<header id="yo" class="Header">
+	<button class="Header-button is-active icon-showMenu" id="showMenu"></button>
+	<button class="Header-button icon-hideMenu" id="hideMenu"></button>
+		<nav class="MainMenu" id="menu">
+			<ul class="MainMenu-list">
+				<li class="MainMenu-item">
+					<a class="MainMenu-link" href="#yo">Yo</a>
+				</li>
+				<li class="MainMenu-item">
+					<a class="MainMenu-link" href="#perfil">Perfil</a>
+				</li>
+				<li class="MainMenu-item">
+					<a class="MainMenu-link" href="#trabajo">Trabajo</a>
+				</li>
+				<li class="MainMenu-item">
+					<a class="MainMenu-link" href="#contacto">Contacto</a>
+				</li>
+			</ul>	
+		</nav>
+		<figure class="Header-imageContainer">
+			<img src="../static/imagenes/avatar2.jpg" alt="Imagen personal" class="Header-image" />
+			<figcaption class="Header-imageDescription">
+				<a class="Header-link" href="http://twitter.com/markyhuevone" target="_black">@markyhuevone</a>
+			</figcaption>
+			<p class="Header-name">Marcos Salazar</p>
+		</figure>
+	</header>
+	<section id="perfil" class="Profile">
+		<div class="u-containerDefault">
+			<h2 class="Profile-title u-title">Mi perfil</h2>
+
+			<p class="Profile-description">
+				Hola! si llegaste hasta aqui puedes ver mi portfolio y contactarme
+			</p>
+			<a class="Profile-link twitter icon-twitter" href="http://twitter.com/markyhuevone" target="_blank">@markyhuevone</a>
+			<a class="Profile-link facebook icon-facebook" href="http://facebook.com/marky_huevone" target="_blank">Marky huevone</a>
+		</div>
+	</section>
+	<section class="Slider">
+		<div class="Slider-container">
+			<ul class="rslides">
+ 				 <li><img src="../static/imagenes/Playa-1024x768.jpg" alt="Imagen de prueba 2" title="Imagen de prueba 2" width="1024" height="400"></li>
+  				 <li><img src="../static/imagenes/nevado_solimana_arequipa.jpg" alt="Imagen de prueba 1" title="Imagen de prueba 1" width="1024" height="400"></li>
+ 				 <li><img src="../static/imagenes/00001631_1024.jpg" alt="Imagen de prueba 3" title="Imagen de prueba 3" width="1024" height="400"></li>
+			</ul>
+		</div>
+	</section>
+	<section id="trabajo" class="Work">
+		<div class="u-containerDefault">
+			<h2 class="Work-title u-title">Mi trabajo</h2>
+		</div>
+		<div class="work-container u-containerDefault">
+			<article class="Work-item">
+				<figure class="Work-imageContainer">
+					<img class="Work-image" src="../static/imagenes/proyecto.jpg" alt="Esto es la descripcion de mi imagen">
+					<figcaption class="Work-description">Paginas de Prueba
+					</figcaption>
+				</figure>	
+			</article>
+			<article class="Work-item">
+				<figure class="Work-imageContainer">
+					<img class="Work-image" src="../static/imagenes/proyecto.jpg" alt="Esto es la descripcion de mi imagen">
+					<figcaption class="Work-description">Paginas de Prueba
+					</figcaption>
+				</figure>	
+			</article>
+			<article class="Work-item">
+				<figure class="Work-imageContainer">
+					<img class="Work-image" src="../static/imagenes/proyecto.jpg" alt="Esto es la descripcion de mi imagen">
+					<figcaption class="Work-description">Paginas de Prueba
+					</figcaption>
+				</figure>	
+			</article>
+			<article class="Work-item">
+				<figure class="Work-imageContainer">
+					<img class="Work-image" src="../static/imagenes/proyecto.jpg" alt="Esto es la descripcion de mi imagen">
+					<figcaption class="Work-description">Paginas de Prueba
+					</figcaption>
+				</figure>	
+			</article>
+			<article class="Work-item">
+				<figure class="Work-imageContainer">
+					<img class="Work-image" src="../static/imagenes/proyecto.jpg" alt="Esto es la descripcion de mi imagen">
+					<figcaption class="Work-description">Paginas de Prueba
+					</figcaption>
+				</figure>	
+			</article>
+			<article class="Work-item">
+				<figure class="Work-imageContainer">
+					<img class="Work-image" src="../static/imagenes/proyecto.jpg" alt="Esto es la descripcion de mi imagen">
+					<figcaption class="Work-description">Paginas de Prueba
+					</figcaption>
+				</figure>	
+			</article>		
+		</div>
+	</section>
+	<footer id="contacto" class="Footer">
+		<div class="Footer-left">
+		<h3 class="Footer-title">Contacto</h3>
+		<p class="Footer-description">Si tienes alguna sugerencia o quieres trabajar conmigo ponte en contacto con este formulario</p>
+		</div>
+		<form action="" class="Footer-form">
+			<input class="Footer-formInput" type="text" name="nombre" placeholder="Nombre*" required="required">
+			<input class="Footer-formInput" type="email" name="email" placeholder="E-mail*" required="required">
+			<textarea class="Footer-textarea"name="" id="" cols="30" rows="10" placeholder="Motivo"></textarea>
+			<button class="Footer-button" type="submit" name="contactame">Contactame</button>
+		</form>
+	</footer>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="../static/js/vendors/responsiveslides.min.js"></script>
+	<script src="../static/js/vendors/retina.min.js"></script>
+	<script src="../static/js/vendors/hammer.min.js"></script>
+	<script>
+	  $(function() {
+	    $(".rslides").responsiveSlides();
+
+	    if(window.matchMedia("(max-width:768px)").matches)
+	    {
+	    	var $buttonShowMenu = document.getElementById('showMenu');
+	    	var $buttonHideMenu = document.getElementById('hideMenu');
+	    	var $menu = document.getElementById('menu');
+
+	    	var $body = document.querySelector('body');
+
+	    	var body = new Hammer($body);
+
+	    	var showMenu = function(){
+	    		$buttonShowMenu.classList.remove('is-active');
+	    		$buttonHideMenu.classList.add('is-active');
+	    		$menu.classList.add('is-active');
+	    	};
+
+	    	var hideMenu = function(){
+	    		$buttonShowMenu.classList.add('is-active');
+	    		$buttonHideMenu.classList.remove('is-active');
+	    		$menu.classList.remove('is-active');
+	    	};
+
+	    	$buttonShowMenu.addEventListener("click", showMenu);
+	    	$buttonHideMenu.addEventListener("click", hideMenu);
+
+	    	body.on('panright',showMenu);
+	    	body.on('panleft',hideMenu);
+	    } 
+	    else
+	    {
+	    	alert('Eres un ipad o un dispositivo mas grande');
+	    }
+	  });
+	</script>
+</body>
+</html>
